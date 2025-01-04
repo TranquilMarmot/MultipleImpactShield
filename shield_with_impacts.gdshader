@@ -21,7 +21,6 @@ group_uniforms impact_parameters;
  */
 const int impacts_tracked = 16;
 
-// information about impact locations (xyz) and their age (w)
 /**
  * List of impact locations (xyz) and their age (w).
  * Age must be updated outside of the shader and passed in each frame.
@@ -45,7 +44,7 @@ varying vec3 local_pos;
 void vertex() {
 	// Extend the vertex position along its normal
 	VERTEX += NORMAL * extend_distance;
-	local_pos = VERTEX; // Store the updated position in local space
+	local_pos = VERTEX;
 }
 
 /**
