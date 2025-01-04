@@ -43,9 +43,9 @@ uniform float impact_falloff_sharpness = 1.0;
 varying vec3 local_pos;
 
 void vertex() {
-    // Extend the vertex position along its normal
-    VERTEX += NORMAL * extend_distance;
-    local_pos = VERTEX; // Store the updated position in local space
+	// Extend the vertex position along its normal
+	VERTEX += NORMAL * extend_distance;
+	local_pos = VERTEX; // Store the updated position in local space
 }
 
 /**
